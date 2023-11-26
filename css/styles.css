@@ -65,6 +65,7 @@ body {
 /* header */
 .head-top { 
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08)
 }
 
 .container-top { 
@@ -108,14 +109,32 @@ body {
     text-transform: uppercase;
 }
 
+.current {
+    color: var(--OCEAN, #404BBF);
+}
+
+.current::after {
+    display: block;
+    content: "";
+    position: relative;
+    width: 48px;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    margin-top: 20px;
+    border-radius: 2px;
+    background: var(--OCEAN, #404BBF);
+    position: absolute;
+}
+
 .link-top { 
     display: flex;
     align-items: flex-start;
     gap: 40px;
 }
 
-.link-top :hover, 
-.link-top :focus{
+.link-top:hover, 
+.link-top:focus{
     color: #404BBF;
 }
 
@@ -128,6 +147,8 @@ body {
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .contacts { 
@@ -151,6 +172,7 @@ body {
     color: #434455;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover,
@@ -162,7 +184,14 @@ body {
 .tagline-button {
     padding: 188px 0; 
     background-color: #2E2F42;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image:linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position:50% 50% ;
+    background-size: cover;
 }
+
 
 
 
@@ -178,15 +207,18 @@ body {
     max-width: 496px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .button { 
+    cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     background-color: #4D5AE5;
-     color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: #FFFFFF;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
@@ -198,6 +230,8 @@ body {
     margin-top: 48px;
     margin-left: auto;
     margin-right: auto;
+    padding: 16px 32px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button:hover, .button:focus {
@@ -220,6 +254,18 @@ body {
  .feature-list-items {
     width: calc((100% - 72px) /4);
  }
+
+ .container-icon {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 112px;
+     background-color: #f4f4fd;
+     margin-bottom: 8px;
+     border-radius: 4px;
+     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+     background: var(--CLOUD, #F4F4FD);
+    }
 
 .info-section {
     font-family: Roboto;
@@ -256,6 +302,40 @@ body {
     margin-bottom: 72px;
     justify-content: center;
 }
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.social-link-section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link-section:hover,
+.social-link-section:focus {
+    background-color: #404bbf;
+}
+.icon-section-three {
+    fill: #f4f4fd;
+}
+
 .content-name {
     font-family: Roboto;
     font-weight: 500;
@@ -288,6 +368,25 @@ body {
     padding-top: 120px;
     padding-bottom: 120px;
     background-color: #F4F4FD;
+}
+
+.our-portfolio-img {
+    position: relative;
+    overflow: hidden;
+}
+.our-portfolio-top {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team-list {
@@ -357,8 +456,14 @@ body {
     width: calc((100% - 48px) / 3);
 }
     
+.portfolio-list-item :hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
-
+.portfolio-list-item :hover .our-portfolio-top, 
+.portfolio-list-item :focus .our-portfolio-top{
+    transform: translateY(0%);
+}
 .list-item {
     background-color: #FFFFFF;
     flex-basis: calc((100% - 72px) / 4);
