@@ -616,7 +616,6 @@ body {
     height: 40px;
     padding-left: 16px;
     border-radius: 4px;
-    border: 1 solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
     margin-left: 80px;
@@ -765,9 +764,8 @@ body {
     border-color: #4d5ae5;
 }
 
-.form-input:focus+.backdrop-items {
-    fill: #4D5AE5;
-} 
+
+ 
 .backdrop-items {
     position: absolute;
     top: 50%;
@@ -836,7 +834,8 @@ body {
    
 }
 
-.service-checkbox:checked+.checkbox-label>.form-checkbox {
+.service-checkbox:checked+
+.checkbox-label>.form-checkbox {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
