@@ -75,7 +75,7 @@ body {
 }
 
 .header-third {
-    color:  #434455;
+    color: #434455;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -89,6 +89,10 @@ body {
     padding: 120px 0;
 }
 
+.adress-link {
+    color: #434455;
+    text-decoration: none;
+    }
 
 
 @media screen and (max-width: 1157px) {
@@ -113,10 +117,11 @@ body {
 
 .contacts  {
     display: none;
+    color: #434455;
 }
 
 .logo-top {
-    color:  #4D5AE5;
+    color: #4D5AE5;
     font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -127,7 +132,7 @@ body {
 }
 
 .logo-studio {
-    color:  #2E2F42;
+    color: #2E2F42;
     font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -202,7 +207,6 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px)
     letter-spacing: 0.04em;
     color: #FFF;
     border-radius: 4px;
-    background:  #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     display: block;
     padding: 16px 32px;
@@ -254,7 +258,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px)
 /* S3 */
 
 .our-team {
-    background:  #F4F4FD;
+    background: #F4F4FD;
     line-height: 1.11;
 }
 
