@@ -54,6 +54,11 @@ img {
     overflow: hidden;
 }
 
+.contacts {
+    color: #434455;
+    text-decoration: none;
+}
+
 
 /* body */
 body {
